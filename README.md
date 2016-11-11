@@ -19,7 +19,6 @@ In overall, app's functionality includes:
 * Share with Friends option (via sms, email, etc.)
 * Contact me option, for sending a Feedback to the developer
 
-=======
 
 ## This app uses the following libraries
 
@@ -31,7 +30,6 @@ In overall, app's functionality includes:
 * RecyclerView
 * Support Annotations
 
-=======
 
 ## Donate
 
