@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    tools:context=".ActivityMain">
+
+    <com.totemsoft.screenlookcount.utils.CircleButton
+        android:id="@+id/b_main_look"
+        style="@style/ButtonLookText"
+        android:layout_width="@dimen/big_button_width"
+        android:layout_height="@dimen/big_button_width"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_main_selector"
+        android:contentDescription="@string/cd_main" />
+
+    <com.totemsoft.screenlookcount.utils.CircleButton
+        android:id="@+id/b_unlock_look"
+        style="@style/ButtonUnlockText"
+        android:layout_width="@dimen/small_button_width"
+        android:layout_height="@dimen/small_button_width"
+        android:layout_alignEnd="@id/b_main_look"
+        android:layout_alignRight="@id/b_main_look"
+        android:layout_below="@id/b_main_look"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_secondary_selector"
+        android:contentDescription="@string/cd_secondary" />
+
+</RelativeLayout>

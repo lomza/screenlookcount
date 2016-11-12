@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- App margins and sizes -->
+    <dimen name="big_button_width">220dp</dimen>
+    <dimen name="small_button_width">120dp</dimen>
+    <dimen name="about_button_width">50dp</dimen>
+    <dimen name="margin_very_big">48dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_very_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="cell_size">40dp</dimen>
+    <dimen name="divider_about_size">8dp</dimen>
+    <dimen name="about_circle_size">40dp</dimen>
+    <dimen name="me_circle_size">160dp</dimen>
+
+    <!-- Font sizes -->
+    <dimen name="text_cell_count">20sp</dimen>
+    <dimen name="text_cell_count_today">22sp</dimen>
+    <dimen name="text_cell_date">30sp</dimen>
+    <dimen name="text_about_title">26sp</dimen>
+    <dimen name="text_about_text">15sp</dimen>
+    <dimen name="big_button_font_size">60sp</dimen>
+    <dimen name="small_button_font_size">40sp</dimen>
+    <dimen name="about_button_font_size">28sp</dimen>
+</resources>

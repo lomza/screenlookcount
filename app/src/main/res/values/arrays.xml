@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countries_with_sun_as_first_day">
+        <item>us</item>
+        <item>usa</item>
+        <item>au</item>
+        <item>aus</item>
+        <item>ca</item>
+        <item>can</item>
+        <item>in</item>
+        <item>ind</item>
+        <item>za</item>
+        <item>zaf</item>
+        <item>nz</item>
+        <item>nzl</item>
+    </string-array>
+</resources>

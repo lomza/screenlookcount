@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivityMain">
+
+        <ScrollView
+            android:id="@+id/sv_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/b_about"
+        style="@style/ButtonAboutText"
+        android:layout_width="@dimen/about_button_width"
+        android:layout_height="@dimen/about_button_width"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/btn_about_selector"
+        android:contentDescription="@string/cd_about"
+        android:text="@string/about" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.totemsoft.screenlookcount"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            buildConfigField "boolean", "GOOGLE_ANALYTICS_DRY_RUN", "true"
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "GOOGLE_ANALYTICS_DRY_RUN", "false"
+        }
+    }
+
+    // 'return void' removes the lint error: 'Not all execution paths return a value'.
+    return void
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:support-annotations:24.2.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'com.google.android.gms:play-services-analytics:9.6.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

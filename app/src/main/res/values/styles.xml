@@ -1,0 +1,170 @@
+<resources>
+
+    <!-- Application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:colorForeground">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="buttonStyle">@style/AppTheme.Button</item>
+        <item name="imageButtonStyle">@style/AppTheme.Button</item>
+        <item name="android:dialogTheme">@style/DialogMainWithTitle</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="actionBarPopupTheme">@style/ActionBarPopupMenu</item>
+    </style>
+
+    <style name="ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@color/action_bar_background</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <style name="ActionBarPopupMenu" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:colorBackground">@color/action_bar_contextual_background</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/button_text</item>
+        <item name="colorButtonNormal">@color/accent</item>
+    </style>
+
+    <style name="DialogDefaultWithTitle" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/primary</item>
+    </style>
+
+    <style name="DialogMainWithTitle" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/btn_main</item>
+    </style>
+
+    <style name="DialogSecondaryWithTitle" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/btn_secondary</item>
+    </style>
+
+    <style name="ButtonLookText">
+        <item name="android:shadowColor">@color/btn_text_shadow</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/btn_main_text_selector</item>
+        <item name="android:textSize">@dimen/big_button_font_size</item>
+    </style>
+
+    <style name="ButtonUnlockText" parent="@style/ButtonLookText">
+        <item name="android:textColor">@drawable/btn_secondary_text_selector</item>
+        <item name="android:textSize">@dimen/small_button_font_size</item>
+    </style>
+
+    <style name="WeekDay">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- Look count calendar -->
+    <style name="CellCount">
+        <item name="android:shadowColor">@color/text_cell_stroke</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/text_cell</item>
+        <item name="android:textSize">@dimen/text_cell_count</item>
+    </style>
+
+    <style name="CellCountSelectedMonth" parent="@style/CellCount">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_cell_selected_month</item>
+        <item name="android:textSize">@dimen/text_cell_count</item>
+    </style>
+
+    <style name="CellCountToday" parent="@style/CellCount">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/text_cell_today</item>
+        <item name="android:textSize">@dimen/text_cell_count_today</item>
+    </style>
+
+    <style name="CellDate">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/text_cell_date</item>
+        <item name="android:textSize">@dimen/text_cell_date</item>
+    </style>
+
+    <style name="CellDateSelectedMonth" parent="style/CellDate">
+        <item name="android:textColor">@color/text_cell_date_selected_month</item>
+    </style>
+
+    <!-- Unlock count calendar -->
+    <style name="CellCountSecondary" parent="@style/CellCount">
+        <item name="android:shadowColor">@color/text_cell_stroke</item>
+        <item name="android:textColor">@color/text_cell_secondary</item>
+    </style>
+
+    <style name="CellCountSelectedMonthSecondary" parent="@style/CellCountSecondary">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_cell_selected_month_secondary</item>
+        <item name="android:textSize">@dimen/text_cell_count</item>
+    </style>
+
+    <style name="CellCountTodaySecondary" parent="@style/CellCountSecondary">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/text_cell_today_secondary</item>
+        <item name="android:textSize">@dimen/text_cell_count_today</item>
+    </style>
+
+    <style name="CellDateSecondary" parent="@style/CellCountSecondary">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/text_cell_date_secondary</item>
+        <item name="android:textSize">@dimen/text_cell_date</item>
+    </style>
+
+    <style name="CellDateSelectedMonthSecondary" parent="style/CellDateSecondary">
+        <item name="android:textColor">@color/text_cell_date_selected_month_secondary</item>
+    </style>
+
+    <!-- About -->
+    <style name="ButtonAboutText" parent="@style/ButtonLookText">
+        <item name="android:textColor">@drawable/btn_about_text_selector</item>
+        <item name="android:textSize">@dimen/about_button_font_size</item>
+    </style>
+
+    <style name="AboutTitle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/text_about</item>
+        <item name="android:textSize">@dimen/text_about_title</item>
+        <item name="android:layout_marginBottom">@dimen/margin_very_small</item>
+    </style>
+
+    <style name="AboutText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_about</item>
+        <item name="android:textSize">@dimen/text_about_text</item>
+    </style>
+
+    <style name="AboutMeText" parent="style/AboutText">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="AboutClickableText" parent="style/AboutText">
+        <item name="android:clickable">true</item>
+        <item name="android:textColorLink">@color/text_link_about</item>
+    </style>
+</resources>

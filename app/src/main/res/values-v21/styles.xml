@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:colorForeground">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:navigationBarColor">@color/navigation_bar</item>
+        <item name="android:buttonStyle">@style/AppTheme.Button</item>
+        <item name="android:imageButtonStyle">@style/AppTheme.Button</item>
+        <item name="android:dialogTheme">@style/DialogMainWithTitle</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="actionBarPopupTheme">@style/ActionBarPopupMenu</item>
+    </style>
+
+    <!-- colorButtonNormal doesn't want to work on Lollipop, hence - Button parent only, with the default bg -->
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+</resources>

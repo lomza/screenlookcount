@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+
+    <!-- App margins and sizes -->
+    <dimen name="big_button_width">400dp</dimen>
+    <dimen name="small_button_width">180dp</dimen>
+    <dimen name="about_button_width">64dp</dimen>
+    <dimen name="margin_very_big">72dp</dimen>
+    <dimen name="margin_big">36dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_small">18dp</dimen>
+    <dimen name="margin_very_small">12dp</dimen>
+    <dimen name="margin_tiny">6dp</dimen>
+    <dimen name="cell_size">60dp</dimen>
+    <dimen name="about_circle_size">60dp</dimen>
+    <dimen name="me_circle_size">186dp</dimen>
+</resources>
