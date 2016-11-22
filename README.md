@@ -1,5 +1,5 @@
 [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donation]
-[![Current Version](https://img.shields.io/badge/release-1.0-blue.svg)](https://github.com/lomza/screenlookcount/releases)
+[![Current Version](https://img.shields.io/badge/release-1.1-blue.svg)](https://github.com/lomza/screenlookcount/releases)
 [![GPL Licence](https://img.shields.io/aur/license/yaourt.svg)](https://opensource.org/licenses/GPL-3.0/)
 
 # Look Counter
