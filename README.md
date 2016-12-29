@@ -35,7 +35,7 @@ In overall, app's functionality includes:
 
 :yum:
 
-If you want to make me happy - https://www.paypal.me/toniatkachuk ;)
+If you want to make me happy - [just drop a few...](https://www.paypal.me/toniatkachuk) ;)
 
 ## License
 
