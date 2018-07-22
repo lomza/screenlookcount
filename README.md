@@ -1,9 +1,9 @@
-[![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donation]
 [![Current Version](https://img.shields.io/badge/release-1.6-green.svg)](https://github.com/lomza/screenlookcount/releases)
 [![GPL Licence](https://img.shields.io/aur/license/yaourt.svg)](https://opensource.org/licenses/GPL-3.0/)
+[![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donation]
 
 # Look Counter
-![Look Count app](https://s21.postimg.org/9s1594h07/image.png)
+![Look Counter app](https://image.ibb.co/hYZt9J/feature_graphic.png)
 [![Download from Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.totemsoft.screenlookcount)
 
 **Look Counter** is a simple, yet elegant app for counting how many times your screen was turned ON, as well as actually unlocked. You always have these two numbers on the main screen, right away. Tapping either of them shows a calendar for a current month, with a counter value per day. You can also swipe the calendar up or down, in order to see other months.
