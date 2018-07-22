@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rl_day"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_day"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minHeight="@dimen/cell_size"
@@ -11,11 +12,15 @@
         android:id="@+id/tv_date"
         style="@style/CellDate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:text="27" />
 
     <TextView
         android:id="@+id/tv_look_count"
         style="@style/CellCount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:text="108" />
+</FrameLayout>

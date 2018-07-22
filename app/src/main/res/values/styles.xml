@@ -102,7 +102,7 @@
         <item name="android:textSize">@dimen/text_cell_date</item>
     </style>
 
-    <style name="CellDateSelectedMonth" parent="style/CellDate">
+    <style name="CellDateSelectedMonth" parent="@style/CellDate">
         <item name="android:textColor">@color/text_cell_date_selected_month</item>
     </style>
 
@@ -133,7 +133,7 @@
         <item name="android:textSize">@dimen/text_cell_date</item>
     </style>
 
-    <style name="CellDateSelectedMonthSecondary" parent="style/CellDateSecondary">
+    <style name="CellDateSelectedMonthSecondary" parent="@style/CellDateSecondary">
         <item name="android:textColor">@color/text_cell_date_selected_month_secondary</item>
     </style>
 
@@ -158,12 +158,12 @@
         <item name="android:textSize">@dimen/text_about_text</item>
     </style>
 
-    <style name="AboutMeText" parent="style/AboutText">
+    <style name="AboutMeText" parent="@style/AboutText">
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
 
-    <style name="AboutClickableText" parent="style/AboutText">
+    <style name="AboutClickableText" parent="@style/AboutText">
         <item name="android:clickable">true</item>
         <item name="android:textColorLink">@color/text_link_about</item>
     </style>

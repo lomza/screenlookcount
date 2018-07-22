@@ -4,26 +4,36 @@
     <string name="action_clear_data">Clear all data</string>
     <string name="action_share">Share with Friends</string>
     <string name="action_rate_app">Rate this app</string>
+    <string name="action_start_counting">Start Counting</string>
+    <string name="action_stop_counting">Stop Counting</string>
     <string name="snack_bar_clear_text">All data cleared.</string>
     <string name="snack_bar_clear_action_undo">UNDO</string>
     <string name="cd_main">Screen looks count</string>
     <string name="cd_secondary">Screen unlocks count</string>
+    <string name="counts_default">0</string>
     <string name="cd_about">About</string>
     <string name="email_chooser">Send email&#8230;</string>
     <string name="share_text">Interested in how many times a day you look at your phone? Check out this app - https://play.google.com/store/apps/details?id=%s!</string>
     <string name="share_chooser">Share via</string>
     <string name="rate_google_play_uri">market://details?id=%s</string>
     <string name="rate_google_play_uri_browser">https://play.google.com/store/apps/details?id=%s</string>
+    <string name="notification_service_title">@string/app_name</string>
+    <string name="notification_service_description">Tap to see screen look and unlock counts.</string>
+
+    <!-- About -->
     <string name="about">\?</string>
     <string name="about_title">What is this app for?</string>
     <string name="about_text"><![CDATA[It is simply for monitoring how many times you looked at your phone, as well as actually unlocked it. Counters reset every day (after 24h) and have a value of 0 at the beginning of using the app (as no data was yet gathered).<br /><br />You can delete all the data by choosing <i>Clear All Data</i> option from the Action Bar on top. There are two other options, <i>Share with Friends</i> and <i>Rate this app</i>.]]></string>
     <string name="about_looks"><![CDATA[Big red circle shows <b>how many times a day the screen was turned on</b>. The counter resets every 24h. Tapping on a circle brings a calendar with a history of screen views. Just swipe the calendar from top to bottom or vise versa, in order to switch months.]]></string>
     <string name="about_unlocks"><![CDATA[Smaller yellow circle shows <b>how many times a day the screen was unlocked</b>. Typically, the value is smaller than screen views. The counter resets every 24h. Tapping on a circle brings a calendar with a history of screen unlocks. Just swipe the calendar from top to bottom or vise versa, in order to switch months.]]></string>
     <string name="about_me"><![CDATA[Hi! My name is Tonia and I wrote this app :) Share your thoughts with me - I\'ll gladly answer the questions or implement changes. Thanks for using <b>Look Counter</b>!]]></string>
-    <string name="contact_me">Contact me</string>
+    <string name="contact_me">Contact</string>
     <string name="about_example_looks_values">56</string>
     <string name="about_example_unlocks_values">48</string>
     <string name="about_email_to">tonia.tkachuk@gmail.com</string>
     <string name="about_email_subject">Contact from Look Counter</string>
     <string name="about_source_code"><![CDATA[Check the <a href="https://github.com/lomza/screenlookcount">source code</a> of this app on <b>GitHub</b>. You can grab pieces you like, suggest improvements, and report bugs.]]></string>
+
+    <!-- Notification -->
+    <string name="notification_channel_screen_looks">Screen looks and unlocks</string>
 </resources>

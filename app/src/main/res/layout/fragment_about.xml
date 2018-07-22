@@ -1,120 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin"
     tools:context=".ActivityMain">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_about_title"
+        style="@style/AboutTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="@string/about_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_about_title"
-            style="@style/AboutTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_title" />
-
-        <TextView
-            android:id="@+id/tv_about_text"
-            style="@style/AboutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <include layout="@layout/view_text_divider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_about_text"
+        style="@style/AboutText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_very_small"
-        android:orientation="horizontal">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about_title" />
 
-        <RelativeLayout
-            android:layout_width="@dimen/about_circle_size"
-            android:layout_height="@dimen/about_circle_size"
-            android:background="@drawable/btn_main_shape">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/about_example_looks_values"
-                android:textColor="@color/white" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_about_looks"
-            style="@style/AboutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_very_small"
-            android:layout_marginStart="@dimen/margin_very_small" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <include
+        android:id="@+id/l_about_divider"
+        layout="@layout/view_text_divider"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about_text" />
 
-        <RelativeLayout
-            android:layout_width="@dimen/about_circle_size"
-            android:layout_height="@dimen/about_circle_size"
-            android:background="@drawable/btn_secondary_shape">
+    <TextView
+        android:id="@+id/tv_about_looks_number"
+        android:layout_width="@dimen/about_circle_size"
+        android:layout_height="@dimen/about_circle_size"
+        android:background="@drawable/btn_main_shape"
+        android:gravity="center"
+        android:text="@string/about_example_looks_values"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tv_about_looks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l_about_divider" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/about_example_unlocks_values"
-                android:textColor="@color/white" />
-        </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_about_looks"
+        style="@style/AboutText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_very_small"
+        android:layout_marginStart="@dimen/margin_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_about_looks_number"
+        app:layout_constraintTop_toTopOf="@+id/tv_about_looks_number" />
 
-        <TextView
-            android:id="@+id/tv_about_unlocks"
-            style="@style/AboutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_very_small"
-            android:layout_marginStart="@dimen/margin_very_small" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_about_unlocks_number"
+        android:layout_width="@dimen/about_circle_size"
+        android:layout_height="@dimen/about_circle_size"
+        android:layout_marginTop="@dimen/margin_very_small"
+        android:background="@drawable/btn_secondary_shape"
+        android:gravity="center"
+        android:text="@string/about_example_unlocks_values"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tv_about_unlocks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about_looks" />
 
-    <include layout="@layout/view_text_divider" />
+    <TextView
+        android:id="@+id/tv_about_unlocks"
+        style="@style/AboutText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_very_small"
+        android:layout_marginStart="@dimen/margin_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_about_unlocks_number"
+        app:layout_constraintTop_toTopOf="@+id/tv_about_unlocks_number" />
 
     <com.totemsoft.screenlookcount.utils.RoundedImageView
         android:id="@+id/iv_me"
         android:layout_width="@dimen/me_circle_size"
         android:layout_height="@dimen/me_circle_size"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/margin_very_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
         android:padding="@dimen/margin_very_small"
-        android:src="@drawable/me_photo" />
+        android:src="@drawable/me_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_unlocks" />
 
     <TextView
         android:id="@+id/tv_about_me"
         style="@style/AboutMeText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/about_me" />
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/about_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_me" />
 
     <Button
         android:id="@+id/b_contact_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margin_big"
-        android:text="@string/contact_me" />
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/contact_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_me" />
 
-    <include layout="@layout/view_text_divider" />
+    <include
+        android:id="@+id/l_about_divider_3"
+        layout="@layout/view_text_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_contact_me" />
 
     <TextView
         android:id="@+id/tv_about_source_code"
         style="@style/AboutClickableText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_about_divider_3" />
+</android.support.constraint.ConstraintLayout>

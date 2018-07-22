@@ -1,46 +1,55 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
-
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.totemsoft.screenlookcount"
         minSdkVersion 16
-        targetSdkVersion 24
-        versionCode 11
-        versionName "1.1"
-    }
+        targetSdkVersion 27
+        versionCode 16
+        versionName "1.6"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+    }
     buildTypes {
         debug {
             minifyEnabled false
             shrinkResources false
-            buildConfigField "boolean", "GOOGLE_ANALYTICS_DRY_RUN", "true"
         }
 
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "boolean", "GOOGLE_ANALYTICS_DRY_RUN", "false"
         }
     }
-
-    // 'return void' removes the lint error: 'Not all execution paths return a value'.
     return void
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.android.support:support-annotations:24.2.1'
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'de.greenrobot:greendao:2.1.0'
-    compile 'com.google.android.gms:play-services-analytics:9.6.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation "android.arch.core:core-testing:1.1.1"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-
-apply plugin: 'com.google.gms.google-services'

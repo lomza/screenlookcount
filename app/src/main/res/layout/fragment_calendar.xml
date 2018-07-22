@@ -1,69 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendarParent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/calendarDayLabel1"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="7">
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel2"
+        app:layout_constraintEnd_toStartOf="@+id/calendarDayLabel3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Mon" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel1"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel2"
+        style="@style/WeekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginStart="54dp"
+        app:layout_constraintEnd_toEndOf="@+id/calendarDayLabel3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tue" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel2"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel3"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel2"
+        app:layout_constraintEnd_toStartOf="@+id/calendarDayLabel4"
+        app:layout_constraintStart_toEndOf="@+id/calendarDayLabel1"
+        tools:text="Wed" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel3"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel4"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel3"
+        app:layout_constraintEnd_toStartOf="@+id/calendarDayLabel5"
+        app:layout_constraintStart_toEndOf="@+id/calendarDayLabel3"
+        tools:text="Fri" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel4"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel5"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel4"
+        app:layout_constraintEnd_toStartOf="@+id/calendarDayLabel6"
+        app:layout_constraintStart_toEndOf="@+id/calendarDayLabel4"
+        tools:text="Sat" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel5"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel6"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel5"
+        app:layout_constraintEnd_toStartOf="@+id/calendarDayLabel7"
+        app:layout_constraintStart_toEndOf="@+id/calendarDayLabel5"
+        tools:text="Sun" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel6"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/calendarDayLabel7"
+        style="@style/WeekDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/calendarDayLabel6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calendarDayLabel6"
+        tools:text="Mon" />
 
-        <TextView
-            android:id="@+id/calendarDayLabel7"
-            style="@style/WeekDay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/calendarDaysGridView"
-        android:layout_width="match_parent"
+        android:id="@+id/calendarDaysRecyclerView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarDayLabel1" />
+</android.support.constraint.ConstraintLayout>

@@ -1,9 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerHorizontal="true"
     android:layout_centerInParent="true"
     tools:context=".ActivityMain">
 
@@ -12,22 +12,26 @@
         style="@style/ButtonLookText"
         android:layout_width="@dimen/big_button_width"
         android:layout_height="@dimen/big_button_width"
-        android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:background="@drawable/btn_main_selector"
-        android:contentDescription="@string/cd_main" />
+        android:contentDescription="@string/cd_main"
+        android:text="@string/counts_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.totemsoft.screenlookcount.utils.CircleButton
         android:id="@+id/b_unlock_look"
         style="@style/ButtonUnlockText"
         android:layout_width="@dimen/small_button_width"
         android:layout_height="@dimen/small_button_width"
-        android:layout_alignEnd="@id/b_main_look"
-        android:layout_alignRight="@id/b_main_look"
-        android:layout_below="@id/b_main_look"
-        android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:background="@drawable/btn_secondary_selector"
-        android:contentDescription="@string/cd_secondary" />
+        android:contentDescription="@string/cd_secondary"
+        android:text="@string/counts_default"
+        app:layout_constraintEnd_toEndOf="@id/b_main_look"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_main_look" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

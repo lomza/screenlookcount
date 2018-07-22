@@ -3,17 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_switch_service"
+        android:title="@string/action_stop_counting"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_clear_data"
         android:title="@string/action_clear_data"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_share"
-        android:title="@string/action_share"
+        android:id="@+id/action_rate_app"
+        android:title="@string/action_rate_app"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_rate_app"
-        android:title="@string/action_rate_app"
+        android:id="@+id/action_share"
+        android:title="@string/action_share"
         app:showAsAction="never" />
 </menu>
