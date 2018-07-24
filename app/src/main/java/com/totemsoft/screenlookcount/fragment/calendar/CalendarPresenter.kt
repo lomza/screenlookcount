@@ -70,7 +70,17 @@ class CalendarPresenter : BasePresenter<CalendarContract.View>(), CalendarContra
             val firstDayOfCurrentMonth = monthNow[0].first.get(Calendar.DAY_OF_WEEK)
             var daysToFill: Int
             if (firstDayOfCurrentMonth != firstDayOfTheWeekSetting) {
-                daysToFill = Math.abs(firstDayOfCurrentMonth - firstDayOfTheWeekSetting)
+                daysToFill = if (firstDayOfTheWeekSetting == Calendar.MONDAY && firstDayOfCurrentMonth == Calendar.SUNDAY) {
+                    // this is the case when first day of the month is Sunday (1)
+                    // and first day of the week is Monday (2)
+                    // Monday - Sunday would give us 1 as daysToFill value,
+                    // which is wrong, so we need to subtract days in week,
+                    // which is 7 from 1 (first day of this month),
+                    // and then we'll get 6 as value for days to fill
+                    daysInWeek - firstDayOfCurrentMonth
+                } else {
+                    Math.abs(firstDayOfCurrentMonth - firstDayOfTheWeekSetting)
+                }
                 val firstDayOfMonth = monthNow.first.first
                 for (i in daysToFill downTo 1) {
                     val dayBefore = firstDayOfMonth.clone() as Calendar
